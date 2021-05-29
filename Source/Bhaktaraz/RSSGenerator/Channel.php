@@ -220,7 +220,7 @@ class Channel implements ChannelInterface
         }
 
         if ($this->pubDate !== null) {
-            $xml->addChild('pubDate', date(DATE_RSS, $this->pubDate));
+            $xml->addChild('pubDate', date('D, d M Y H:i:s', $this->pubDate));
         }
 
         if ($this->lastBuildDate !== null) {
