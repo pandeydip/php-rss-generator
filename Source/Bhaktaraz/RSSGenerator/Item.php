@@ -175,7 +175,7 @@ class Item implements ItemInterface
         $xml->addChild('title', $this->title);
         $xml->addChild('link', $this->url);
         if ($this->pubDate !== null) {
-            $xml->addChild('pubDate', date('D, d M Y H:i:s', $this->pubDate));
+            $xml->addChild('pubDate', date('F jS, g:ia', $this->pubDate));
         }
 
         if ($this->creator) {
